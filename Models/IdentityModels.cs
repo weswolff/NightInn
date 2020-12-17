@@ -29,5 +29,7 @@ namespace NightInnV2.Models
         {
             return new ApplicationDbContext();
         }
+        public DbSet<NightInnV2.Models.Food> Foods { get; set; }
+        public DbSet<NightInnV2.Models.Theme> Themes { get; set; }
     }
 }
