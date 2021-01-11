@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using NightInn.Data;
 using NightInnV2.Models;
 
 namespace NightInnV2.Controllers
