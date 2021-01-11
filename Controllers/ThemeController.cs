@@ -1,4 +1,5 @@
-﻿using NightInnV2.Models;
+﻿using NightInn.Data;
+using NightInnV2.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
