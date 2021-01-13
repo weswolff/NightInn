@@ -54,7 +54,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DrinkModels\DrinkCreate.cs" />
+    <Compile Include="DrinkModels\DrinkDetail.cs" />
+    <Compile Include="DrinkModels\DrinkEdit.cs" />
+    <Compile Include="DrinkModels\DrinkListItem.cs" />
+    <Compile Include="FoodModels\FoodCreate.cs" />
+    <Compile Include="FoodModels\FoodDetail.cs" />
+    <Compile Include="FoodModels\FoodEdit.cs" />
+    <Compile Include="FoodModels\FoodListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemeModels\ThemeCreate.cs" />
+    <Compile Include="ThemeModels\ThemeDetail.cs" />
+    <Compile Include="ThemeModels\ThemeEdit.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
