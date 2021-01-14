@@ -272,6 +272,20 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="NightInn.Data\NightInn.Data.csproj">
+      <Project>{46cd5060-3045-4ccd-9b2a-37d507613699}</Project>
+      <Name>NightInn.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="NightInn.Models\NightInn.Models.csproj">
+      <Project>{b35f8783-7d9d-44f0-9ac0-68a4408dcafc}</Project>
+      <Name>NightInn.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="NightInn.Services\NightInn.Services.csproj">
+      <Project>{a14c9815-c7a1-49f9-a535-ede1d1333eb3}</Project>
+      <Name>NightInn.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

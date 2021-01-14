@@ -22,5 +22,6 @@ namespace NightInnV2.Models
         [ForeignKey(nameof(Theme))]
         public int ThemeId { get; set; }
         public virtual Theme Theme { get; set; }
+        public Guid OwnerId { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NightInn.Models.ThemeModels
 {
-    public class ThemeEdit
+    public class ThemeListItem
     {
         public int ThemeId { get; set; }
         public string ThemeName { get; set; }

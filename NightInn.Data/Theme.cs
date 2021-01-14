@@ -12,5 +12,6 @@ namespace NightInnV2.Models
         public int ThemeId { get; set; }
         [Required]
         public string ThemeName { get; set; }
+        public Guid OwnerId { get; set; }
     }
 }
