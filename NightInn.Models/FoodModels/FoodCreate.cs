@@ -9,7 +9,7 @@ namespace NightInn.Models
 {
     public class FoodCreate
     {
-        public int FoodID { get; set; }
+        public int FoodId { get; set; }
         [Required]
         [Display(Name = "Meal Name")]
         public string FoodName { get; set; }

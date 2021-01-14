@@ -10,7 +10,7 @@ namespace NightInn.Models.DrinkModels
     {
         public int DrinkId { get; set; }
         public string DrinkName { get; set; }
-        public string ThemeId { get; set; }
+        public int ThemeId { get; set; }
         public int DrinkServingSize { get; set; }
     }
 }

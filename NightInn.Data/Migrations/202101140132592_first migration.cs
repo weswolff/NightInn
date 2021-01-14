@@ -17,8 +17,22 @@ namespace NightInn.Data.Migrations
                         Ingredients = c.String(nullable: false),
                         Instructions = c.String(),
                         DrinkServingSize = c.Int(nullable: false),
+                        ThemeId = c.Int(nullable: false),
+                        OwnerId = c.Guid(nullable: false),
                     })
-                .PrimaryKey(t => t.DrinkId);
+                .PrimaryKey(t => t.DrinkId)
+                .ForeignKey("dbo.Themes", t => t.ThemeId, cascadeDelete: true)
+                .Index(t => t.ThemeId);
+            
+            CreateTable(
+                "dbo.Themes",
+                c => new
+                    {
+                        ThemeId = c.Int(nullable: false, identity: true),
+                        ThemeName = c.String(nullable: false),
+                        OwnerId = c.Guid(nullable: false),
+                    })
+                .PrimaryKey(t => t.ThemeId);
             
             CreateTable(
                 "dbo.Foods",
@@ -30,19 +44,11 @@ namespace NightInn.Data.Migrations
                         Instructions = c.String(nullable: false),
                         FoodServingSize = c.Int(nullable: false),
                         ThemeId = c.Int(nullable: false),
+                        OwnerId = c.Guid(nullable: false),
                     })
                 .PrimaryKey(t => t.FoodId)
                 .ForeignKey("dbo.Themes", t => t.ThemeId, cascadeDelete: true)
                 .Index(t => t.ThemeId);
-            
-            CreateTable(
-                "dbo.Themes",
-                c => new
-                    {
-                        ThemeId = c.Int(nullable: false, identity: true),
-                        ThemeName = c.String(nullable: false),
-                    })
-                .PrimaryKey(t => t.ThemeId);
             
             CreateTable(
                 "dbo.AspNetRoles",
@@ -121,6 +127,7 @@ namespace NightInn.Data.Migrations
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             DropForeignKey("dbo.Foods", "ThemeId", "dbo.Themes");
+            DropForeignKey("dbo.Drinks", "ThemeId", "dbo.Themes");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
@@ -128,13 +135,14 @@ namespace NightInn.Data.Migrations
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             DropIndex("dbo.Foods", new[] { "ThemeId" });
+            DropIndex("dbo.Drinks", new[] { "ThemeId" });
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
-            DropTable("dbo.Themes");
             DropTable("dbo.Foods");
+            DropTable("dbo.Themes");
             DropTable("dbo.Drinks");
         }
     }

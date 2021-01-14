@@ -13,7 +13,7 @@ namespace NightInn.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202101112305345_first migration"; }
+            get { return "202101140132592_first migration"; }
         }
         
         string IMigrationMetadata.Source

@@ -66,6 +66,7 @@
     <Compile Include="ThemeModels\ThemeCreate.cs" />
     <Compile Include="ThemeModels\ThemeDetail.cs" />
     <Compile Include="ThemeModels\ThemeEdit.cs" />
+    <Compile Include="ThemeModels\ThemeListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
