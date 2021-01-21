@@ -242,7 +242,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Food\Index.cshtml" />
     <Content Include="Views\Food\Create.cshtml" />
-    <Content Include="Views\Food\Delete.cshtml" />
     <Content Include="Views\Food\Edit.cshtml" />
     <Content Include="Views\Food\Details.cshtml" />
     <Content Include="Views\Theme\Index.cshtml" />
@@ -252,9 +251,10 @@
     <Content Include="Views\Theme\Details.cshtml" />
     <Content Include="Views\Drink\Index.cshtml" />
     <Content Include="Views\Drink\Create.cshtml" />
-    <Content Include="Views\Drink\Delete.cshtml" />
     <Content Include="Views\Drink\Edit.cshtml" />
     <Content Include="Views\Drink\Details.cshtml" />
+    <Content Include="Views\Food\Delete.cshtml" />
+    <Content Include="Views\Drink\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
