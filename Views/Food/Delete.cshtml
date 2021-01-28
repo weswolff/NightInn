@@ -1,4 +1,4 @@
-﻿@model NightInnV2.Models.Food
+﻿@model NightInn.Models.FoodModels.FoodDetail
 
 @{
     ViewBag.Title = "Delete";
@@ -11,14 +11,6 @@
     <h4>Food</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Theme.ThemeName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Theme.ThemeName)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.FoodName)
         </dt>
@@ -50,15 +42,6 @@
         <dd>
             @Html.DisplayFor(model => model.FoodServingSize)
         </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.OwnerId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.OwnerId)
-        </dd>
-
     </dl>
 
     @using (Html.BeginForm()) {

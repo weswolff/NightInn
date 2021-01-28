@@ -1,7 +1,41 @@
 ﻿@model IEnumerable<NightInnV2.Models.Theme>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Themes";
 }
 
-<h2>Index</h2>
-
+<h2>Themes</h2>
+<div class="btn btn-info btn-large">
+    @Html.ActionLink("Create New", "Create")
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ThemeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Foods)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Drinks)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.ThemeName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Foods)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Drinks)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ThemeId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ThemeId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ThemeId }) |
+    </td>
+</tr>
+    }
+</table>

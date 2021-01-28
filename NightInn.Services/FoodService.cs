@@ -25,7 +25,6 @@ namespace NightInn.Services
                 {
                     OwnerId = _userId,
                     FoodName = model.FoodName,
-                    ThemeId = model.ThemeId,
                     Ingredients = model.Ingredients,
                     Instructions = model.Instructions,
                     FoodServingSize = model.FoodServingSize,
@@ -50,7 +49,6 @@ namespace NightInn.Services
                                 {
                                     FoodId = e.FoodId,
                                     FoodName = e.FoodName,
-                                    ThemeId = e.ThemeId,
                                     Ingredients = e.Ingredients,
                                     Instructions = e.Instructions,
                                     FoodServingSize = e.FoodServingSize
@@ -73,8 +71,6 @@ namespace NightInn.Services
                     {
                         FoodId = entity.FoodId,
                         FoodName = entity.FoodName,
-                        Theme = entity.Theme.ThemeName,
-                        ThemeId = entity.ThemeId,
                         Ingredients = entity.Ingredients,
                         Instructions = entity.Instructions,
                         FoodServingSize = entity.FoodServingSize
@@ -91,7 +87,6 @@ namespace NightInn.Services
                         .Single(e => e.FoodId == model.FoodId && e.OwnerId == _userId);
                 
                 entity.FoodName = model.FoodName;
-                entity.ThemeId = model.ThemeId;
                 entity.Ingredients = model.Ingredients;
                 entity.Instructions = model.Instructions;
                 entity.FoodServingSize = model.FoodServingSize;

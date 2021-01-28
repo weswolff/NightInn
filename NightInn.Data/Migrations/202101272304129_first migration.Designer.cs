@@ -7,13 +7,13 @@ namespace NightInn.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class ManytoManyThemerelationship2 : IMigrationMetadata
+    public sealed partial class firstmigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ManytoManyThemerelationship2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(firstmigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "202101210034484_Many to Many Theme relationship2"; }
+            get { return "202101272304129_first migration"; }
         }
         
         string IMigrationMetadata.Source

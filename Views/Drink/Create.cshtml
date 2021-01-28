@@ -1,4 +1,4 @@
-﻿@model NightInnV2.Models.Drink
+﻿@model NightInn.Models.DrinkModels.DrinkCreate
 
 @{
     ViewBag.Title = "Create";
@@ -25,8 +25,8 @@
     <div class="form-group">
         @Html.LabelFor(model => model.ThemeId, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.EditorFor(model => model.ThemeId, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.ThemeId, "", new { @class = "text-danger" })
+            @Html.DropDownList("SelectedThemeIds", Model.ThemeList, new { multiple = "multiple" })
+            @Html.ValidationMessageFor(model => model.SelectedThemeIds, "", new { @class = "text-danger" })
         </div>
     </div>
 

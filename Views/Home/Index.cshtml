@@ -3,27 +3,30 @@
 }
 
 <div class="jumbotron" id="main">
-    <h1><i class="fas fa-cocktail"></i>Night Inn</h1>
-    <p class="lead">Night Inn allows you to save food and drink recipes. Along with allowing you to search for a theme and get corresponding pairings.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Night Inn</h1>
 </div>
-
 <div class="row">
-    <div class="col-md-4">
-        <h2>Create a theme</h2>
-        <p>
-            Create a theme to begin making pairings.
-        </p>
-        @Html.ActionLink("Create a theme", "Create", "Theme", null, new { @class = "btn btn-primary btn-large" })
+    <div class="col-sm-4">
+        <h2>Theme</h2>
+        @Html.ActionLink("Create a theme", "Create", "Theme", null, new { @class = "btn btn-info btn-large btn-block" })
     </div>
-    <div class="col-md-4">
-        <h2>Add a food recipe</h2>
-        <p>Add your favorite food recipes and link them to a theme.</p>
-        @Html.ActionLink("Add food", "Create", "Food", null, new { @class = "btn btn-primary btn-large" })
+    <div class="col-sm-4">
+        <h2>Food</h2>
+        @Html.ActionLink("Create food", "Create", "Food", null, new { @class = "btn btn-info btn-large btn-block" })
     </div>
-    <div class="col-md-4">
-        <h2>Add a drink recipe</h2>
-        <p>Add your favorite drink recipe.</p>
-        @Html.ActionLink("Add a drink", "Create", "Drink", null, new { @class = "btn btn-primary btn-large" })
+    <div class="col-sm-4">
+        <h2>Drink</h2>
+        @Html.ActionLink("Create a drink", "Create", "Drink", null, new { @class = "btn btn-info btn-large btn-block" })
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        @Html.ActionLink("View Themes", "Index", "Theme", null, new { @class = "btn btn-info btn-large btn-block" })
+    </div>
+    <div class="col-sm-4">
+        @Html.ActionLink("View Foods", "Index", "Food", null, new { @class = "btn btn-info btn-large btn-block" })
+    </div>
+    <div class="col-sm-4">
+        @Html.ActionLink("View Drinks", "Index", "Drink", null, new { @class = "btn btn-info btn-large btn-block" })
     </div>
 </div>

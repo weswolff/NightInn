@@ -13,5 +13,7 @@ namespace NightInnV2.Models
         [Required]
         public string ThemeName { get; set; }
         public Guid OwnerId { get; set; }
+        public virtual ICollection<Food> Foods { get; set; } = new HashSet<Food>();
+        public virtual ICollection<Drink> Drinks { get; set; } = new HashSet<Drink>();
     }
 }

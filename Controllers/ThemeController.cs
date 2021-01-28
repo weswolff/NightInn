@@ -14,7 +14,9 @@ namespace NightInnV2.Controllers
         // GET: Theme
         public ActionResult Index()
         {
-            return View();
+            List<Theme> themeList = _nightInnDb.Themes.ToList();
+            List<Theme> orderedList = themeList.OrderBy(theme => theme.ThemeName).ToList();
+            return View(orderedList);
         }
         // GET: Theme
         public ActionResult Create()

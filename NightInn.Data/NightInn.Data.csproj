@@ -78,21 +78,13 @@
     <Compile Include="Drink.cs" />
     <Compile Include="Food.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202101202334223_First Migration.cs" />
-    <Compile Include="Migrations\202101202334223_First Migration.Designer.cs">
-      <DependentUpon>202101202334223_First Migration.cs</DependentUpon>
+    <Compile Include="Migrations\202101272304129_first migration.cs" />
+    <Compile Include="Migrations\202101272304129_first migration.Designer.cs">
+      <DependentUpon>202101272304129_first migration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101210031365_Many to Many Theme relationship.cs" />
-    <Compile Include="Migrations\202101210031365_Many to Many Theme relationship.Designer.cs">
-      <DependentUpon>202101210031365_Many to Many Theme relationship.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101210034484_Many to Many Theme relationship2.cs" />
-    <Compile Include="Migrations\202101210034484_Many to Many Theme relationship2.Designer.cs">
-      <DependentUpon>202101210034484_Many to Many Theme relationship2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101252315117_Second Migration.cs" />
-    <Compile Include="Migrations\202101252315117_Second Migration.Designer.cs">
-      <DependentUpon>202101252315117_Second Migration.cs</DependentUpon>
+    <Compile Include="Migrations\202101282327253_second migration.cs" />
+    <Compile Include="Migrations\202101282327253_second migration.Designer.cs">
+      <DependentUpon>202101282327253_second migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,17 +95,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202101202334223_First Migration.resx">
-      <DependentUpon>202101202334223_First Migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101272304129_first migration.resx">
+      <DependentUpon>202101272304129_first migration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101210031365_Many to Many Theme relationship.resx">
-      <DependentUpon>202101210031365_Many to Many Theme relationship.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101210034484_Many to Many Theme relationship2.resx">
-      <DependentUpon>202101210034484_Many to Many Theme relationship2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101252315117_Second Migration.resx">
-      <DependentUpon>202101252315117_Second Migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101282327253_second migration.resx">
+      <DependentUpon>202101282327253_second migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
