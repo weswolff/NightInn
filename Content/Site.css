@@ -69,3 +69,17 @@ textarea {
 .table{
     background: rgba(178, 175, 181, 0.90)
 }
+.media-heading{
+    text-align: center;
+    color:red;
+}
+.dl-horizontal{
+    color:darkviolet;
+}
+.form-actions{
+    align-content:center;
+}
+.info {
+    background: rgb(255, 255, 255, .5);
+    color: black;
+}
