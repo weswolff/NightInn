@@ -32,6 +32,12 @@ namespace NightInn.Services
                 ctx.Themes.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
+            //foreach(var id in model)
+            //{
+                //Need to get enumberable for model
+                //iterate to find ids
+                //add to theme through update method (maybe)
+           // }
         }
         public IEnumerable<ThemeListItem> GetThemes()
         {

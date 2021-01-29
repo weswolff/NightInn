@@ -37,6 +37,12 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+.page-header {
+    text-align: center;
+    font-family: Verdana;
+    font-size: 30px;
+    color: purple;
+}
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -58,6 +64,8 @@ textarea {
     text-align: center;
 }
 .form-horizontal{
-    justify-content:center;
     color: purple;
+}
+.table{
+    background: rgba(178, 175, 181, 0.90)
 }

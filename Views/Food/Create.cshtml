@@ -4,7 +4,7 @@
     ViewBag.Title = "Add a food recipe";
 }
 
-<h2>Add a Recipe</h2>
+<h2 class="page-header">Add a Recipe</h2>
 
 @using (Html.BeginForm()) 
 {
@@ -51,13 +51,10 @@
     </div>
 
     <div class="form-group">
-        <div class="col-sm-6">
+        <div class="col-sm-offset-6">
             <input type="submit" value="Create" class="btn btn-info" />
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-info btn-large" })
         </div>
     </div>
 </div>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>

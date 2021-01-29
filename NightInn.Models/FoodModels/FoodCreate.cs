@@ -14,9 +14,9 @@ namespace NightInn.Models
         [Required]
         [Display(Name = "Meal Name")]
         public string FoodName { get; set; }
-        [Required]
+        [DataType(DataType.MultilineText)]
         public string Ingredients { get; set; }
-        [Required]
+        [DataType(DataType.MultilineText)]
         public string Instructions { get; set; }
         [Display(Name = "Serving Size")]
         public int FoodServingSize { get; set; }

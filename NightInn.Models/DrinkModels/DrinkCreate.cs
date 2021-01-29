@@ -15,8 +15,9 @@ namespace NightInn.Models.DrinkModels
         public string DrinkName { get; set; }
         public int ThemeId { get; set; }
         public Decimal DrinkAbv { get; set; }
-        [Required]
+        [DataType(DataType.MultilineText)]
         public string Ingredients { get; set; }
+        [DataType(DataType.MultilineText)]
         public string Instructions { get; set; }
         public int DrinkServingSize { get; set; }
         public IEnumerable<SelectListItem> Themes { get; set; }
