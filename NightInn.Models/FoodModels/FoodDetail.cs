@@ -12,7 +12,7 @@ namespace NightInn.Models.FoodModels
         public int FoodId { get; set; }
         [Display(Name = "Meal Name")]
         public string FoodName { get; set; }
-        public string ThemeId { get; set; }
+        public int ThemeId { get; set; }
         public string Theme { get; set; }
         public string Ingredients { get; set; }
         public string Instructions { get; set; }

@@ -1,7 +1,41 @@
 ﻿@model IEnumerable<NightInnV2.Models.Food>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Foods";
 }
 
-<h2>Index</h2>
-
+<h2 class="page-header">Foods</h2>
+<div class="btn btn-info btn-large">
+    @Html.ActionLink("Create New", "Create")
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FoodName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FoodServingSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Themes)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.FoodName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.FoodServingSize)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Themes)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.FoodId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.FoodId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.FoodId }) |
+    </td>
+</tr>
+    }
+</table>

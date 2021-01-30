@@ -14,13 +14,12 @@ namespace NightInnV2.Models
         [Required]
         public string DrinkName { get; set; }
         public Decimal DrinkAbv { get; set; }
-        [Required]
+        [DataType(DataType.MultilineText)]
         public string Ingredients { get; set; }
+        [DataType(DataType.MultilineText)]
         public string Instructions { get; set; }
         public int DrinkServingSize { get; set; }
-
-        [ForeignKey(nameof(Theme))]
-        public int ThemeId { get; set; }
-        public virtual Theme Theme { get; set; }
+        public Guid OwnerId { get; set; }
+        public virtual ICollection<Theme> Themes { get; set; }
     }
 }
