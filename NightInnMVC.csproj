@@ -185,16 +185,18 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fontawesome.css.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Views\Shared\Images\Screen Shot 2021-01-28 at 1.51.53 PM.png" />
+    <Content Include="webfonts\fa-brands-400.svg" />
+    <Content Include="webfonts\fa-regular-400.svg" />
+    <Content Include="webfonts\fa-solid-900.svg" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -242,7 +244,6 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Food\Index.cshtml" />
     <Content Include="Views\Food\Create.cshtml" />
-    <Content Include="Views\Food\Delete.cshtml" />
     <Content Include="Views\Food\Edit.cshtml" />
     <Content Include="Views\Food\Details.cshtml" />
     <Content Include="Views\Theme\Index.cshtml" />
@@ -252,9 +253,22 @@
     <Content Include="Views\Theme\Details.cshtml" />
     <Content Include="Views\Drink\Index.cshtml" />
     <Content Include="Views\Drink\Create.cshtml" />
-    <Content Include="Views\Drink\Delete.cshtml" />
     <Content Include="Views\Drink\Edit.cshtml" />
     <Content Include="Views\Drink\Details.cshtml" />
+    <Content Include="Views\Food\Delete.cshtml" />
+    <Content Include="Views\Drink\Delete.cshtml" />
+    <Content Include="webfonts\fa-brands-400.eot" />
+    <Content Include="webfonts\fa-brands-400.ttf" />
+    <Content Include="webfonts\fa-brands-400.woff" />
+    <Content Include="webfonts\fa-brands-400.woff2" />
+    <Content Include="webfonts\fa-regular-400.eot" />
+    <Content Include="webfonts\fa-regular-400.ttf" />
+    <Content Include="webfonts\fa-regular-400.woff" />
+    <Content Include="webfonts\fa-regular-400.woff2" />
+    <Content Include="webfonts\fa-solid-900.eot" />
+    <Content Include="webfonts\fa-solid-900.ttf" />
+    <Content Include="webfonts\fa-solid-900.woff" />
+    <Content Include="webfonts\fa-solid-900.woff2" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -264,13 +278,23 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="NightInn.Data\NightInn.Data.csproj">
+      <Project>{46cd5060-3045-4ccd-9b2a-37d507613699}</Project>
+      <Name>NightInn.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="NightInn.Models\NightInn.Models.csproj">
+      <Project>{b35f8783-7d9d-44f0-9ac0-68a4408dcafc}</Project>
+      <Name>NightInn.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="NightInn.Services\NightInn.Services.csproj">
+      <Project>{a14c9815-c7a1-49f9-a535-ede1d1333eb3}</Project>
+      <Name>NightInn.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

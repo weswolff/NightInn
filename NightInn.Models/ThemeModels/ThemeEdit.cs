@@ -8,6 +8,7 @@ namespace NightInn.Models.ThemeModels
 {
     public class ThemeEdit
     {
-
+        public int ThemeId { get; set; }
+        public string ThemeName { get; set; }
     }
 }

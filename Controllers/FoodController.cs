@@ -1,4 +1,5 @@
 ﻿using NightInn.Data;
+using NightInn.Models;
 using NightInnV2.Models;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,17 @@ namespace NightInnV2.Controllers
         // GET: Food
         public ActionResult Create()
         {
-            return View();
+            var viewModel = new FoodCreate();
+
+            var themes = _nightInnDb.Themes.Select(theme => new
+            {
+                ThemeId = theme.ThemeId,
+                ThemeName = theme.ThemeName.ToString()
+            }).ToList();
+
+            viewModel.ThemeList = new MultiSelectList(themes, "ThemeId", "ThemeName");
+
+            return View(viewModel);
         }
 
         // POST: Food

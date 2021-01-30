@@ -4,11 +4,9 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2 class="page-header">@Html.DisplayFor(model => model.FoodName)</h2>
 
-<div>
-    <h4>Food</h4>
-    <hr />
+<div class="info">
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.FoodName)
@@ -17,7 +15,6 @@
         <dd>
             @Html.DisplayFor(model => model.FoodName)
         </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.Ingredients)
         </dt>
@@ -44,7 +41,7 @@
 
     </dl>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.FoodId }) |
-    @Html.ActionLink("Back to List", "Index")
+<p class="col-sm-offset-4">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FoodId }, new { @class = "btn btn-info btn-large" })
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-info btn-large" })
 </p>

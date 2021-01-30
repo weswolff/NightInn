@@ -3,5 +3,46 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Drinks</h2>
+<div class="btn btn-info btn-large">
+    @Html.ActionLink("Create New", "Create")
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DrinkName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Themes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DrinkAbv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DrinkServingSize)
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.DrinkName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Themes)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DrinkAbv)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DrinkServingSize)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.DrinkId }) |
+        @Html.ActionLink("Details", "Details", new { id = item.DrinkId }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.DrinkId }) |
+    </td>
+</tr>
+    }
+</table>
 
